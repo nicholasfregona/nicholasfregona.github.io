@@ -13,7 +13,6 @@
     :root {
       --bg: #0a0f1c;
       --surface: #141f35;
-      --surface-light: #192845;
       --text: #f4f7fb;
       --muted: #b7c1d4;
       --accent: #4f8cff;
@@ -221,19 +220,19 @@
       background: rgba(79, 140, 255, 0.10);
     }
 
-    .contact {
-      text-align: center;
+    .button-email {
+      gap: 8px;
     }
 
-    .contact p {
-      max-width: 650px;
-      margin: 0 auto 26px;
-      color: var(--muted);
-      font-size: 1.05rem;
-    }
-
-    .contact .button-group {
-      justify-content: center;
+    .email-icon {
+      width: 18px;
+      height: 18px;
+      fill: none;
+      stroke: #06111f;
+      stroke-width: 1.8;
+      stroke-linecap: round;
+      stroke-linejoin: round;
+      flex-shrink: 0;
     }
 
     .button-whatsapp {
@@ -276,6 +275,21 @@
       font-weight: 700;
       line-height: 1;
       flex-shrink: 0;
+    }
+
+    .contact {
+      text-align: center;
+    }
+
+    .contact p {
+      max-width: 650px;
+      margin: 0 auto 26px;
+      color: var(--muted);
+      font-size: 1.05rem;
+    }
+
+    .contact .button-group {
+      justify-content: center;
     }
 
     footer {
@@ -404,7 +418,7 @@
         <h2>Resume and recommendation material.</h2>
 
         <p>
-          A private-sector Resume tailored to analyst, advisory, operations, and
+          A private-sector resume tailored to analyst, advisory, operations, and
           management-track roles is available on request. Professional recommendation
           material is also available when appropriate.
         </p>
@@ -434,9 +448,17 @@
       </p>
 
       <div class="button-group">
-        <a class="button button-primary"
-           href="mailto:nicholasfregona@gmail.com">
-          nicholasfregona@gmail.com
+
+        <a class="button button-primary button-email"
+           href="mailto:nicholasfregona@gmail.com"
+           aria-label="Email Nicholas Fregona">
+
+          <svg class="email-icon" viewBox="0 0 24 24" aria-hidden="true">
+            <rect x="3" y="5" width="18" height="14" rx="2"></rect>
+            <path d="m3 7 9 6 9-6"></path>
+          </svg>
+
+          <span>nicholasfregona@gmail.com</span>
         </a>
 
         <a class="button button-whatsapp"
@@ -462,6 +484,7 @@
           <span class="linkedin-badge" aria-hidden="true">in</span>
           <span>LinkedIn Profile</span>
         </a>
+
       </div>
     </section>
 
